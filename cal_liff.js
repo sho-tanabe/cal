@@ -82,6 +82,7 @@ const textbox1 = document.getElementById("textbox1")
 const textbox2 = document.getElementById("textbox2")
 const type = document.getElementById("type")
 const display = document.getElementById("answer")
+const display_result = document.getElementById("result")
 
 let secondNum = 0;
 let ans = ''
@@ -114,6 +115,29 @@ function run() {
     display.innerHTML = ans;
     isInit = false;
 }
+
+
+//「=」ボタン押下時の動作。「+=」は加算演算子
+function autocal() {
+    if (isInit) {
+        result_ans = Number(textbox1.value)
+    }
+    result_secondNum = Number(textbox2.value)
+    switch (kigou) {
+        case "+": result_ans += result_secondNum;
+            break;
+        case "-": ans -= secondNum;
+            break;
+        case "×": ans *= secondNum;
+            break;
+        case "÷": ans /= secondNum;
+            break;
+        default: ans = 0;
+    }
+    display_result.innerHTML = result_ans;
+    isInit = false;
+}
+
 
 //クリアボタン押下時の動作
 function refresh() {
