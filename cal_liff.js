@@ -26,8 +26,7 @@ function sendText(text) {
     if (!liff.isInClient()) {
         shareTargetPicker(text);
     } else {
-        sendMessages("見積もり申し込み"); /////////文言「見積もり申し込み」の送信は成功したが、Gmailへの転送が成功しない。
-        sendautomail(text);
+        //sendautomail(text);ガス料金単価計算の結果をメール転送するならこちら
         sendMessages(text);
     }
 }
@@ -65,7 +64,7 @@ function sendautomail(text){
         Password : "B1B77086CF542475B41E41582E7D1B36E78D",
         To : 'lpg.switching@gmail.com',
         From : "lpg.switching@gmail.com",
-        Subject : "LINE経由でガス見積もり申し込みあり。",
+        Subject : "LINE経由でガス料金単価の計算実行あり。",
         //Body : "ガス見積もりの申し込みがありました。"
         Body : text
     }).then(
