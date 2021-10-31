@@ -108,6 +108,30 @@
             <input class="form-control w-100 mt-1" name="name" maxlength="10">
         </div>
 
+        <!--以下四則演算テスト-------------------------------------------------->
+        
+        <div>
+        <input type="text" id="textbox1">
+            <div>
+                <div id="type">ここに記号が表示されます</div>
+                <button  onclick="sign('+')">+</button>
+                <button  onclick="sign('-')">-</button>
+                <button  onclick="sign('×')">×</button>
+                <button  onclick="sign('÷')">÷</button>
+            </div>
+        </div>
+        <div>
+            <input type="text" id="textbox2">
+            <button onclick="run()">=</button> 
+            <button onclick="refresh()">clear!</button>
+        </div>
+        <div id="answer">0</div>
+        <script src="./calculator.js"></script>
+        
+
+        <!--以下四則演算テスト-------------------------------------------------->        
+        
+        
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
 
