@@ -88,36 +88,34 @@ let ans = ''
 let kigou = "";
 let isInit = true;
 
+//「+-✖︎÷」ボタン押下時の動作。「kigou」に四則演算子を代入している。
 function sign(btn) {
     kigou = btn;
     type.innerHTML = btn;
 }
 
+//「=」ボタン押下時の動作。「+=」は加算演算子
 function run() {
     if (isInit) {
         ans = Number(textbox1.value)
     }
     secondNum = Number(textbox2.value)
     switch (kigou) {
-        case "+":
-            ans += secondNum;
+        case "+": ans += secondNum;
             break;
-        case "-":
-            ans -= secondNum;
+        case "-": ans -= secondNum;
             break;
-        case "×":
-            ans *= secondNum;
+        case "×": ans *= secondNum;
             break;
-        case "÷":
-            ans /= secondNum;
+        case "÷": ans /= secondNum;
             break;
-        default:
-            ans = 0;
+        default: ans = 0;
     }
     display.innerHTML = ans;
     isInit = false;
 }
 
+//クリアボタン押下時の動作
 function refresh() {
     isInit = true;
     secondNum = 0;
