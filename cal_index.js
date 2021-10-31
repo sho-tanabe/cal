@@ -43,16 +43,17 @@ $(function () {
         //var msg = `申し込み内容\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額：${total}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;
 
         if (result2 < 100) {
-                var msg = `99以下です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${total}\n合計金額result2：${result2}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`; 
-                var msg = `99以下です`;             
+                var msg1 = `99以下です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${total}\n合計金額result2：${result2}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`; 
+                var msg2 = `99以下です`;             
         } else {
-                var msg = `100以上です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${total}\n合計金額result2：${result2}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`; 
-                var msg = `100以上です`; 
+                var msg1 = `100以上です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${total}\n合計金額result2：${result2}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`; 
+                var msg2 = `100以上です`; 
             }
         
         
         //var msg = `申し込み内容\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${total}\n合計金額result2：${result2}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;        
-        sendText(msg);
+        sendText(msg1);
+        sendText(msg2);
 
         return false;
     });
