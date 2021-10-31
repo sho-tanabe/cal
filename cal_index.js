@@ -26,6 +26,8 @@ $(function () {
         var text10 = $('input[name="text10"]').val();
         var total = $('[name="total"]').val();
         
+        var result2 = $('#quantity').val() * $('#price').val();
+        
 
         //練習エリア終了
         
@@ -39,7 +41,7 @@ $(function () {
 
         //var msg = `申し込み内容\n--\n希望日：${date}\n人数：${number}\n氏名：${names}`;
         //var msg = `申し込み内容\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額：${total}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;
-        var msg = `申し込み内容\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額：${total}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;        
+        var msg = `申し込み内容\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${total}\n合計金額result2：${result2}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;        
         sendText(msg);
 
         return false;
