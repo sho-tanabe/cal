@@ -156,6 +156,11 @@ function refresh() {
 function update_field(){
     var result2 = $('#quantity').val() * $('#price').val();
     $('#total').text(result2);
+    
+    //追記テスト開始
+    //var total = result2;
+    //追記テスト終了
+    
 }
 $(function() {
   $('input[type="number"]').on('keyup change', function() {
