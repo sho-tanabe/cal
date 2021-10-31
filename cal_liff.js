@@ -150,4 +150,17 @@ function refresh() {
     textbox1.value = "";
     textbox2.value = "";
 }
+
+//----------------------------------------以下電卓テスト２----------------------------------------
+
+function update_field(){
+    var result2 = $('#quantity').val() * $('#price').val();
+    $('#total').text(result2);
+}
+$(function() {
+  $('input[type="number"]').on('keyup change', function() {
+    update_field();
+  });
+});
+
 //----------------------------------------以上電卓テスト----------------------------------------
