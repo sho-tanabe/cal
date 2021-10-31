@@ -24,7 +24,7 @@ $(function () {
         var text1 = $('input[name="text1"]').val();
         var select1 = $('[name="select1"] option:selected').val();
         var text10 = $('input[name="text10"]').val();
-        var total = $('input[name="total"]').val();
+        var total = $('[name="total"]').val();
 
         //練習エリア終了
         
