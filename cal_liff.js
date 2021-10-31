@@ -169,3 +169,37 @@ $(function() {
 });
 
 //----------------------------------------以上電卓テスト----------------------------------------
+
+//----------------------------------------以下Sendtextテスト２----------------------------------------
+function sendText2(text) {
+    if (!liff.isInClient()) {
+        shareTargetPicker2(text);
+    } else {
+//        sendMessages("見積もり申し込み"); /////////文言「見積もり申し込み」の送信は成功したが、Gmailへの転送が成功しない。
+//        sendautomail(text);
+        sendMessages2(text);
+    }
+}
+
+// LINEトーク画面上でメッセージ送信
+function sendMessages2(text) {
+    liff.sendMessages([{
+        'type': 'text',
+        'text': text
+    }]).then(function () {
+        liff.closeWindow();
+    }).catch(function (error) {
+        window.alert('Failed to send message ' + error);
+    });
+}
+
+// Webブラウザからメッセージ送信
+function shareTargetPicker2(text) {
+    liff.shareTargetPicker([{
+        'type': 'text',
+        'text': text
+    }]).catch(function (error) {
+        window.alert('Failed to send message ' + error);
+    });
+}
+//----------------------------------------以上Sendtextテスト２----------------------------------------
